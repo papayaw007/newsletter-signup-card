@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+    <title>Newsletter</title>
+  </head>
+  <body>
+    <div class="h-screen flex justify-center items-center bg-gray-700">
+      <div
+         id="mainPage"
+        class="flex justify-center items-center w-auto h-auto bg-white p-5 rounded-xl"
+      >
+        <div class="flex flex-col mr-18 ml-10 gap-5">
+          <h1 class="text-6xl font-semibold">Stay updated!</h1>
+          <p>
+            Join 60,000+ product managers receiving monthly <br />
+            updates on:
+          </p>
+          <div class="flex flex-col space-y-2 mb-10">
+            <div class="flex space-x-4">
+              <img src="/images/icon-list.svg" alt="icon-list" />
+              <p>Product discovery and building what matters</p>
+            </div>
+            <div class="flex space-x-4">
+              <img src="/images/icon-list.svg" alt="icon-list" />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+
+            <div class="flex space-x-4">
+              <img src="/images/icon-list.svg" alt="icon-list" />
+              <p>And much more</p>
+            </div>
+          </div>
+          <div class="">
+            <form id="basic_form" autocomplete="off" novalidate="novalidate">
+                <div class="flex flex-col gap-2 mb-2">
+              <label for="email" class="text-sm font-semibold"
+                >Email address</label>
+              <input
+                id="basic_email"
+                name="email"
+                type="text"
+                autocomplete="off"
+                placeholder="email@company.com"
+                class="input border border-slate-300 rounded-md py-4 pl-5"
+              />
+            </div>
+              <button
+              class="bg-slate-900 text-white font-semibold py-4 px-20 rounded-md mt-2 hover:bg-red-400"
+              >
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/illustration-sign-up-desktop.svg"
+            alt="desktop-image"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center items-center w-auto h-auto bg-white gap-10 p-10 rounded-xl hidden" id="successPage">
+        <div class="mr-72">
+            <img src="/images/icon-success.svg" alt="success-icon">
+        </div>
+        <div class="space-y-10">
+            <h1 class="text-6xl font-semibold">Thanks for <br> subscribing !</h1>
+            <p class="text-sm"> A confirming email has been sent to <br>
+                 <span class="font-semibold" id="emailtag">email@company.com</span> Please open it and click <br>
+                 the button inside to confirm your subscription.</p>
+        </div>
+        <div>
+            <button class="bg-slate-900 text-white py-2 px-30 rounded-md hover:bg-red-400" id="dismiss-btn">Dismiss message</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js" ></script>
+</html>
